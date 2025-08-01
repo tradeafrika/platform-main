@@ -1,9 +1,10 @@
-import { SiteHeader } from '@/components/marketing/site-header'
+import { SiteHeader } from '@/components/marketing/site/header/site-header'
 import { Button } from '@/components/ui/button'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ArrowRight, Globe, Shield, TrendingUp, Users, Zap, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
+import Footer from '@/components/marketing/site/footer'
 
 export default function HomePage() {
     return (
@@ -11,7 +12,7 @@ export default function HomePage() {
             <SiteHeader />
 
             {/* Hero Section */}
-            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-green-50 dark:from-orange-950/20 dark:to-green-950/20">
+            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br  dark:from-orange-950/20 dark:to-green-950/20">
                 <div className="max-w-7xl mx-auto text-center">
                     <Badge variant="outline" className="mb-4">
                         🌍 Connecting Africa to Global Markets
@@ -139,7 +140,7 @@ export default function HomePage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-600 to-green-600">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-orange-600">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Trading?</h2>
                     <p className="text-xl text-orange-100 mb-8">
@@ -162,81 +163,7 @@ export default function HomePage() {
             </section>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid md:grid-cols-4 gap-8">
-                        <div>
-                            <h3 className="text-lg font-semibold mb-4">Trade Afrika</h3>
-                            <p className="text-gray-400">
-                                Connecting African suppliers with global buyers for sustainable trade growth.
-                            </p>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold mb-4">Platform</h4>
-                            <ul className="space-y-2 text-gray-400">
-                                <li>
-                                    <Link href="/marketplace" className="hover:text-white">
-                                        Marketplace
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/suppliers" className="hover:text-white">
-                                        Suppliers
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/categories" className="hover:text-white">
-                                        Categories
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold mb-4">Company</h4>
-                            <ul className="space-y-2 text-gray-400">
-                                <li>
-                                    <Link href="/about" className="hover:text-white">
-                                        About Us
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/contact" className="hover:text-white">
-                                        Contact
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/careers" className="hover:text-white">
-                                        Careers
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold mb-4">Support</h4>
-                            <ul className="space-y-2 text-gray-400">
-                                <li>
-                                    <Link href="/help" className="hover:text-white">
-                                        Help Center
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/privacy" className="hover:text-white">
-                                        Privacy Policy
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/terms" className="hover:text-white">
-                                        Terms of Service
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                        <p>&copy; 2025 Trade Afrika. All rights reserved.</p>
-                    </div>
-                </div>
-            </footer>
+                <Footer/>
         </div>
     )
 }

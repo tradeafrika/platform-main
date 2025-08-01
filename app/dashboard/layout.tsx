@@ -33,6 +33,9 @@ import {
     Store,
     User,
 } from 'lucide-react'
+import commonLogo from "@/assets/tradeafrikalogo.png"
+import Image from 'next/image'
+
 
 interface NavItem {
     title: string
@@ -55,7 +58,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     }, [pathname])
 
     const buyerNavItems: NavItem[] = [
-        { title: 'Home', href: '/dashboard/home', icon: Home },
+        { title: 'Home', href: '/dashboard/', icon: Home },
         { title: 'Marketplace', href: '/dashboard/marketplace', icon: Store },
         { title: 'RFQs', href: '/dashboard/rfqs', icon: MessageSquare },
         { title: 'Orders', href: '/dashboard/orders', icon: ShoppingBag },
@@ -88,12 +91,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     return (
         <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900">
             {/* Sidebar for desktop */}
-            <aside className="hidden md:flex w-64 flex-col border-r bg-white dark:bg-gray-950 dark:border-gray-800">
-                <div className="flex h-14 items-center border-b px-4">
+            <aside className="hidden md:flex w-64 flex-col   bg-white dark:bg-gray-950 dark:border-gray-800">
+                <div className="flex h-14 items-center  px-4">
                     <Link href="/" className="flex items-center gap-2 font-semibold">
-                        <span className="text-xl font-bold">
-                            Trade<span className="text-primary">Afrika</span>
-                        </span>
+                        <Image src={commonLogo} width="40" height="40" alt="product-logo" />
+                        <span className="hidden font-bold sm:inline-block">Trade Afrika</span>
                     </Link>
                 </div>
                 <nav className="flex-1 overflow-auto py-4">
@@ -134,43 +136,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         ))}
                     </div>
                 </nav>
-                <div className="border-t p-4">
-                    <div className="flex items-center gap-3">
-                        <Avatar>
-                            <AvatarImage src="/placeholder.svg?height=32&width=32" />
-                            <AvatarFallback>JD</AvatarFallback>
-                        </Avatar>
-                        <div>
-                            <p className="text-sm font-medium">John Doe</p>
-                            <p className="text-xs text-gray-500 dark:text-gray-400">john@example.com</p>
-                        </div>
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" size="icon" className="ml-auto">
-                                    <ChevronDown className="h-4 w-4" />
-                                    <span className="sr-only">Menu</span>
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent align="end">
-                                <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                                <DropdownMenuSeparator />
-                                <DropdownMenuItem>
-                                    <User className="mr-2 h-4 w-4" />
-                                    Profile
-                                </DropdownMenuItem>
-                                <DropdownMenuItem>
-                                    <Settings className="mr-2 h-4 w-4" />
-                                    Settings
-                                </DropdownMenuItem>
-                                <DropdownMenuSeparator />
-                                <DropdownMenuItem>
-                                    <LogOut className="mr-2 h-4 w-4" />
-                                    Log out
-                                </DropdownMenuItem>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
-                    </div>
-                </div>
+               
             </aside>
 
             {/* Mobile sidebar */}
@@ -245,7 +211,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
             {/* Main content */}
             <div className="flex flex-1 flex-col">
-                <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-white px-4 dark:bg-gray-950 dark:border-gray-800">
+                <header className="sticky top-0 z-30 flex h-14 items-center gap-4  bg-white px-4 dark:bg-gray-950 dark:border-gray-800">
                     <div className="md:hidden w-6" />
                     <div className="ml-auto flex items-center gap-2">
                         <Button variant="ghost" size="icon">
