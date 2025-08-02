@@ -12,7 +12,7 @@ export function MainNav() {
         <div className="mr-4 hidden md:flex">
             <ProductLogo/>
             <nav className="flex items-center space-x-6 text-sm font-medium">
-                <Link
+                {/* <Link
                     href="/marketplace"
                     className={cn(
                         'transition-colors hover:text-foreground/80',
@@ -20,8 +20,8 @@ export function MainNav() {
                     )}
                 >
                     Marketplace
-                </Link>
-                <Link
+                </Link> */}
+                {/* <Link
                     href="/suppliers"
                     className={cn(
                         'transition-colors hover:text-foreground/80',
@@ -29,7 +29,7 @@ export function MainNav() {
                     )}
                 >
                     Suppliers
-                </Link>
+                </Link> */}
                 <Link
                     href="/about"
                     className={cn(
@@ -40,6 +40,16 @@ export function MainNav() {
                     About
                 </Link>
                 <Link
+                    href="/privacy"
+                    className={cn(
+                        'transition-colors hover:text-foreground/80',
+                        pathname === '/privacy' ? 'text-foreground' : 'text-foreground/60'
+                    )}
+                >
+                    Privacy
+                </Link>
+                
+                {/* <Link
                     href="/contact"
                     className={cn(
                         'transition-colors hover:text-foreground/80',
@@ -47,7 +57,7 @@ export function MainNav() {
                     )}
                 >
                     Contact
-                </Link>
+                </Link> */}
             </nav>
         </div>
     )

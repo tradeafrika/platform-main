@@ -11,26 +11,7 @@ export default function Footer() {
                             Connecting African suppliers with global buyers for sustainable trade growth.
                         </p>
                     </div>
-                    <div>
-                        <h4 className="font-semibold mb-4">Platform</h4>
-                        <ul className="space-y-2 text-gray-400">
-                            <li>
-                                <Link href="/marketplace" className="hover:text-white">
-                                    Marketplace
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/suppliers" className="hover:text-white">
-                                    Suppliers
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/categories" className="hover:text-white">
-                                    Categories
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
+                   
                     <div>
                         <h4 className="font-semibold mb-4">Company</h4>
                         <ul className="space-y-2 text-gray-400">
@@ -39,26 +20,13 @@ export default function Footer() {
                                     About Us
                                 </Link>
                             </li>
-                            <li>
-                                <Link href="/contact" className="hover:text-white">
-                                    Contact
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/careers" className="hover:text-white">
-                                    Careers
-                                </Link>
-                            </li>
+                        
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-semibold mb-4">Support</h4>
                         <ul className="space-y-2 text-gray-400">
-                            <li>
-                                <Link href="/help" className="hover:text-white">
-                                    Help Center
-                                </Link>
-                            </li>
+                           
                             <li>
                                 <Link href="/privacy" className="hover:text-white">
                                     Privacy Policy

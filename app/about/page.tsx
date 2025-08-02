@@ -1,3 +1,4 @@
+import Footer from '@/components/marketing/site/footer';
 import { SiteHeader } from '@/components/marketing/site/header/site-header';
 
 export default function AboutPage() {
@@ -33,6 +34,7 @@ export default function AboutPage() {
           </p>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }

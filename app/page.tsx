@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { ArrowRight, Globe, Shield, TrendingUp, Users, Zap, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import Footer from '@/components/marketing/site/footer'
+import Image from 'next/image'
 
 export default function HomePage() {
     return (
@@ -12,27 +13,28 @@ export default function HomePage() {
             <SiteHeader />
 
             {/* Hero Section */}
-            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br  dark:from-orange-950/20 dark:to-green-950/20">
-                <div className="max-w-7xl mx-auto text-center">
-                    <Badge variant="outline" className="mb-4">
-                        🌍 Connecting Africa to Global Markets
+            <section className="relative h-[500px] py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br  dark:from-orange-950/20 dark:to-green-950/20">
+                <Image alt='Hero Image' fill src="https://images.pexels.com/photos/2960007/pexels-photo-2960007.jpeg" />
+                <div className=" text-center bg-[#00000044]  absolute top-0 w-full h-full start-0 flex items-center flex-col justify-center ">
+                    <Badge variant="outline" className="mb-4 text-lg font-semibold">
+                        <span className='text-orange-500'>Connect.</span> <span className='text-green-600'>Transact.</span> <span className='text-orange-500'>Grow.</span>
                     </Badge>
                     <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">
                         Trade Afrika
                         <span className="block text-orange-600 dark:text-orange-400">B2B Marketplace</span>
                     </h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+                    <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
                         Connect with verified African suppliers, discover authentic products, and build lasting business
                         partnerships across the continent.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700">
-                            <Link href="/auth/create-account">
-                                Start Trading <ArrowRight className="ml-2 h-4 w-4" />
+                            <Link href="/waitlist">
+                                Join Waitlist <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                         </Button>
                         <Button asChild variant="outline" size="lg">
-                            <Link href="/marketplace">Browse Products</Link>
+                            <Link href="/about">About us</Link>
                         </Button>
                     </div>
                 </div>
@@ -148,16 +150,9 @@ export default function HomePage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button asChild size="lg" variant="secondary">
-                            <Link href="/auth/create-account">Create Free Account</Link>
+                            <Link href="/waitlist">Join Waitlist</Link>
                         </Button>
-                        <Button
-                            asChild
-                            size="lg"
-                            variant="outline"
-                            className="border-white text-white hover:bg-white hover:text-orange-600 bg-transparent"
-                        >
-                            <Link href="/marketplace">Explore Marketplace</Link>
-                        </Button>
+                       
                     </div>
                 </div>
             </section>
