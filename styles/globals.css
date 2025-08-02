@@ -10,6 +10,8 @@
 
 @layer base {
   :root {
+    --afrika:153.31 95.53% 25.86%;
+    --afrika-orange:14.61 89.77% 57.84%;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;

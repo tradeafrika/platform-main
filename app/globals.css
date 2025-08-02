@@ -5,6 +5,9 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
+    --afrika:153.31 95.53% 25.86%;
+    --afrika-orange:14.61 89.77% 57.84%;
+
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;

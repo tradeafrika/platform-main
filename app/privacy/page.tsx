@@ -7,7 +7,7 @@ export default function PrivacyPage() {
             <SiteHeader />
             <div className="min-h-screen">
                 {/* Hero Section */}
-                <section className="bg-green-600 text-white py-20">
+                <section className="bg-afrika text-white py-20">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>

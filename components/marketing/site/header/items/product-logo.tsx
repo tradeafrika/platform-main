@@ -6,7 +6,7 @@ export default function ProductLogo() {
     return (
         <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image src={commonLogo} width="40" height="40" alt="product-logo" />
-            <span className="hidden font-bold sm:inline-block">Trade Afrika</span>
+            <span className=" font-bold ">Trade Afrika</span>
         </Link>
     )
 }

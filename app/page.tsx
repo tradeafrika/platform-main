@@ -13,26 +13,40 @@ export default function HomePage() {
             <SiteHeader />
 
             {/* Hero Section */}
-            <section className="relative h-[500px] py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br  dark:from-orange-950/20 dark:to-green-950/20">
-                <Image alt='Hero Image' fill src="https://images.pexels.com/photos/2960007/pexels-photo-2960007.jpeg" />
-                <div className=" text-center bg-[#00000044]  absolute top-0 w-full h-full start-0 flex items-center flex-col justify-center ">
-                    <Badge variant="outline" className="mb-4 text-lg font-semibold">
-                        <span className='text-orange-500'>Connect.</span> <span className='text-green-600'>Transact.</span> <span className='text-orange-500'>Grow.</span>
+            <section className="relative h-[500px] sm:h-[600px] lg:h-[700px] overflow-hidden bg-gradient-to-br dark:from-orange-950/20 dark:to-green-950/20">
+                {/* Background Image */}
+                <Image
+                    src="https://images.pexels.com/photos/3856440/pexels-photo-3856440.jpeg"
+                    alt="Hero Image"
+                    fill
+                    priority
+                    className="object-cover brightness-75"
+                />
+
+                {/* Overlay Content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center bg-orange-950/25">
+                    <Badge variant="outline" className="mb-4 text-base sm:text-lg font-semibold backdrop-blur">
+                        <span className="text-orange-500">Connect.</span>{' '}
+                        <span className="text-green-600">Transact.</span> <span className="text-orange-500">Grow.</span>
                     </Badge>
-                    <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">
+
+                    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
                         Trade Afrika
-                        <span className="block text-orange-600 dark:text-orange-400">B2B Marketplace</span>
+                        <span className="block text-orange-500 dark:text-orange-400">B2B Marketplace</span>
                     </h1>
-                    <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
-                        Connect with verified African suppliers, discover authentic products, and build lasting business
-                        partnerships across the continent.
+
+                    <p className="text-base sm:text-lg lg:text-xl text-white max-w-3xl mx-auto mb-8  font-medium ">
+                        Connect authentically, trade confidently, and grow exponentially with Africa's most trusted
+                        business partners and verified supplier networks.
                     </p>
+
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700">
                             <Link href="/waitlist">
                                 Join Waitlist <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                         </Button>
+
                         <Button asChild variant="outline" size="lg">
                             <Link href="/about">About us</Link>
                         </Button>
@@ -152,13 +166,12 @@ export default function HomePage() {
                         <Button asChild size="lg" variant="secondary">
                             <Link href="/waitlist">Join Waitlist</Link>
                         </Button>
-                       
                     </div>
                 </div>
             </section>
 
             {/* Footer */}
-                <Footer/>
+            <Footer />
         </div>
     )
 }

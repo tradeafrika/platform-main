@@ -4,61 +4,73 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import ProductLogo from './items/product-logo'
+import { Menu, X } from 'lucide-react'
+import { useState } from 'react'
 
-export function MainNav() {
+export default function MainNav() {
     const pathname = usePathname()
+    const [mobileOpen, setMobileOpen] = useState(false)
+
+    const links = [
+        { href: '/', label: 'Home' },
+        { href: '/about', label: 'About' },
+        { href: '/privacy', label: 'Privacy' },
+        { href: '/contact', label: 'Contact' },
+
+        // Add more routes here if needed
+    ]
 
     return (
-        <div className="mr-4 hidden md:flex">
-            <ProductLogo/>
-            <nav className="flex items-center space-x-6 text-sm font-medium">
-                {/* <Link
-                    href="/marketplace"
-                    className={cn(
-                        'transition-colors hover:text-foreground/80',
-                        pathname === '/marketplace' ? 'text-foreground' : 'text-foreground/60'
-                    )}
-                >
-                    Marketplace
-                </Link> */}
-                {/* <Link
-                    href="/suppliers"
-                    className={cn(
-                        'transition-colors hover:text-foreground/80',
-                        pathname === '/suppliers' ? 'text-foreground' : 'text-foreground/60'
-                    )}
-                >
-                    Suppliers
-                </Link> */}
-                <Link
-                    href="/about"
-                    className={cn(
-                        'transition-colors hover:text-foreground/80',
-                        pathname === '/about' ? 'text-foreground' : 'text-foreground/60'
-                    )}
-                >
-                    About
-                </Link>
-                <Link
-                    href="/privacy"
-                    className={cn(
-                        'transition-colors hover:text-foreground/80',
-                        pathname === '/privacy' ? 'text-foreground' : 'text-foreground/60'
-                    )}
-                >
-                    Privacy
-                </Link>
-                
-                {/* <Link
-                    href="/contact"
-                    className={cn(
-                        'transition-colors hover:text-foreground/80',
-                        pathname === '/contact' ? 'text-foreground' : 'text-foreground/60'
-                    )}
-                >
-                    Contact
-                </Link> */}
+        <div className="flex items-center justify-between w-full md:w-auto">
+       
+
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center space-x-6 ml-6 text-sm font-medium">
+                {links.map((link) => (
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        className={cn(
+                            'transition-colors uppercase hover:text-foreground/80 font-medium',
+                            pathname === link.href ? 'text-green-600' : 'text-green-950'
+                        )}
+                    >
+                        {link.label}
+                    </Link>
+                ))}
             </nav>
+
+            {/* Mobile Toggle Button (hidden on md+) */}
+            <div className="md:hidden ml-auto">
+                <button
+                    onClick={() => setMobileOpen(!mobileOpen)}
+                    className="p-2 focus:outline-none"
+                    aria-label="Toggle menu"
+                >
+                    {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                </button>
+            </div>
+
+            {/* Mobile Nav Menu */}
+            {mobileOpen && (
+                <div className="absolute top-[70px] left-0 z-40 w-full bg-white shadow-md md:hidden">
+                    <nav className="flex flex-col items-start px-4 py-4 space-y-4 text-sm font-medium">
+                        {links.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                onClick={() => setMobileOpen(false)}
+                                className={cn(
+                                    'transition-colors hover:text-foreground/80',
+                                    pathname === link.href ? 'text-foreground' : 'text-foreground/60'
+                                )}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </nav>
+                </div>
+            )}
         </div>
     )
 }
