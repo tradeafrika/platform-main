@@ -4,16 +4,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { SiteHeader } from '@/components/marketing/site/header/site-header'
-import commonLogo from "@/assets/tradeafrikalogo.png"
+import commonLogo from '@/assets/tradeafrikalogo.png'
 import Footer from '@/components/marketing/site/footer'
 
 export default function AboutUs() {
     return (
         <main className="bg-white dark:bg-background text-foreground">
-            <SiteHeader/>
+            <SiteHeader />
             {/* Hero Section */}
             <section className="relative bg-afrika h-[300px] sm:h-[400px] flex items-center justify-center text-center overflow-hidden ">
-              
                 <div className="relative z-10 px-4 ">
                     <h1 className="text-4xl sm:text-5xl font-extrabold text-white">About Us</h1>
                     <p className="mt-4 text-white/90 max-w-xl mx-auto text-base sm:text-lg">
@@ -37,13 +36,7 @@ export default function AboutUs() {
                     </p>
                 </div>
                 <div className="relative h-72 md:h-96 rounded-lg overflow-hidden  items-center justify-center flex">
-                    <Image
-                    height={350}
-                    width={350}
-                        src={commonLogo}
-                        alt="Trade Afrika team"
-                        className="object-cover"
-                    />
+                    <Image height={350} width={350} src={commonLogo} alt="Trade Afrika team" className="object-cover" />
                 </div>
             </section>
 
@@ -82,7 +75,7 @@ export default function AboutUs() {
                 <div className="text-center max-w-3xl mx-auto">
                     <h2 className="text-3xl font-bold mb-4">Why Trade Afrika?</h2>
                     <p className="text-muted-foreground text-lg mb-8">
-                        Unlike generic marketplaces, Trade Afrika is built for African businesses—featuring:
+                        Unlike generic marketplaces, Trade Afrika is built for African businesses featuring:
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-sm text-muted-foreground">
@@ -92,12 +85,12 @@ export default function AboutUs() {
                     </div>
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
                         <h4 className="font-semibold mb-2 text-green-600">Escrow Payment Protection</h4>
-                        <p>Funds are held securely until delivery is confirmed—boosting trust and safety.</p>
+                        <p>Funds are held securely until delivery is confirmed boosting trust and safety.</p>
                     </div>
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
                         <h4 className="font-semibold mb-2 text-orange-600">RFQ-Based Sourcing</h4>
                         <p>
-                            Post a Request for Quote (RFQ) and receive multiple responses—like a built-in procurement
+                            Post a Request for Quote (RFQ) and receive multiple responses like a built-in procurement
                             team.
                         </p>
                     </div>
@@ -108,7 +101,7 @@ export default function AboutUs() {
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
                         <h4 className="font-semibold mb-2 text-orange-600">Pan-African Network</h4>
                         <p>
-                            Buyers and suppliers from all AfCFTA regions—East, West, Central, Southern, and North
+                            Buyers and suppliers from all AfCFTA regions in East, West, Central, Southern, and North
                             Africa.
                         </p>
                     </div>
@@ -128,7 +121,7 @@ export default function AboutUs() {
                     </Button>
                 </div>
             </section>
-            <Footer/>
+            <Footer />
         </main>
     )
 }
