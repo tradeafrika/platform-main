@@ -242,8 +242,8 @@ export default function TermsPage() {
                             <h2 className="text-2xl font-bold mt-12 mb-6">13. Governing Law</h2>
 
                             <p>
-                                These Terms are governed by the laws of Nigeria. Any disputes will be resolved in the
-                                courts of Lagos State, Nigeria, or through binding arbitration as specified in our
+                                These Terms are governed by the laws of Uganda. Any disputes will be resolved in the
+                                courts of Uganda or through binding arbitration as specified in our
                                 dispute resolution procedures.
                             </p>
 
@@ -264,9 +264,7 @@ export default function TermsPage() {
                                     <strong>Trade Afrika Limited</strong>
                                 </p>
                                 <p>Legal Department</p>
-                                <p>Email: legal@tradeafrika.com</p>
-                                <p>Phone: +234 1 234 5678</p>
-                                <p>Address: Victoria Island, Lagos, Nigeria</p>
+                                <p>Address: National Innovation Hub, Nakawa</p>
                             </div>
 
                             <div className="bg-green-50 border-l-4 border-green-500 p-6 mt-8">
