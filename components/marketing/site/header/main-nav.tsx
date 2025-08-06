@@ -14,7 +14,7 @@ export default function MainNav() {
     const links = [
         { href: '/', label: 'Home' },
         { href: '/about', label: 'About' },
-        { href: '/privacy', label: 'Privacy' },
+        { href: '/categories', label: 'All categories' },
         { href: '/contact', label: 'Contact' },
 
         // Add more routes here if needed
@@ -22,7 +22,7 @@ export default function MainNav() {
 
     return (
         <div className="flex items-center justify-between w-full md:w-auto">
-       
+
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center space-x-6 ml-6 text-sm font-medium">
