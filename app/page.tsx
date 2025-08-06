@@ -776,66 +776,17 @@ export default function HomePage() {
                                 {/* Partner 1 - African Development Bank */}
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <div className="text-2xl font-bold text-orange-600 mb-1">ADB</div>
-                                        <div className="text-xs text-gray-500">African Dev Bank</div>
+                                        <img src="/images/ict hub.jpg" alt="innovation hub" width="" />
                                     </div>
                                 </div>
 
                                 {/* Partner 2 - Trade & Development Bank */}
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <div className="text-2xl font-bold text-green-600 mb-1">TDB</div>
-                                        <div className="text-xs text-gray-500">Trade Dev Bank</div>
+                                        <img src="/images/ict logo.jpg" alt="innovation hub" width="" />
                                     </div>
                                 </div>
 
-                                {/* Partner 3 - African Union */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-blue-600 mb-1">AU</div>
-                                        <div className="text-xs text-gray-500">African Union</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 4 - ECOWAS */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-purple-600 mb-1">ECOWAS</div>
-                                        <div className="text-xs text-gray-500">West Africa</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 5 - Standard Bank */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-teal-600 mb-1">SBG</div>
-                                        <div className="text-xs text-gray-500">Standard Bank</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 6 - Ecobank */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-red-600 mb-1">ECO</div>
-                                        <div className="text-xs text-gray-500">Ecobank</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 7 - AfCFTA */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-yellow-600 mb-1">AfCFTA</div>
-                                        <div className="text-xs text-gray-500">Continental FTA</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 8 - DHL */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-red-500 mb-1">DHL</div>
-                                        <div className="text-xs text-gray-500">Logistics</div>
-                                    </div>
-                                </div>
                             </div>
 
                             {/* Duplicate set for seamless loop */}
@@ -843,64 +794,14 @@ export default function HomePage() {
                                 {/* Partner 1 - African Development Bank */}
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <div className="text-2xl font-bold text-orange-600 mb-1">ADB</div>
-                                        <div className="text-xs text-gray-500">African Dev Bank</div>
+                                        <img src="/images/ict hub.jpg" alt="innovation hub" width="" />
                                     </div>
                                 </div>
 
                                 {/* Partner 2 - Trade & Development Bank */}
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <div className="text-2xl font-bold text-green-600 mb-1">TDB</div>
-                                        <div className="text-xs text-gray-500">Trade Dev Bank</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 3 - African Union */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-blue-600 mb-1">AU</div>
-                                        <div className="text-xs text-gray-500">African Union</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 4 - ECOWAS */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-purple-600 mb-1">ECOWAS</div>
-                                        <div className="text-xs text-gray-500">West Africa</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 5 - Standard Bank */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-teal-600 mb-1">SBG</div>
-                                        <div className="text-xs text-gray-500">Standard Bank</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 6 - Ecobank */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-red-600 mb-1">ECO</div>
-                                        <div className="text-xs text-gray-500">Ecobank</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 7 - AfCFTA */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-yellow-600 mb-1">AfCFTA</div>
-                                        <div className="text-xs text-gray-500">Continental FTA</div>
-                                    </div>
-                                </div>
-
-                                {/* Partner 8 - DHL */}
-                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-red-500 mb-1">DHL</div>
-                                        <div className="text-xs text-gray-500">Logistics</div>
+                                        <img src="/images/ict logo.jpg" alt="innovation hub" width="" />
                                     </div>
                                 </div>
                             </div>
