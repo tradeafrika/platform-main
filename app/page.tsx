@@ -1,3 +1,5 @@
+"use client"
+
 import { SiteHeader } from '@/components/marketing/site/header/site-header'
 import { Button } from '@/components/ui/button'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -6,22 +8,68 @@ import { ArrowRight, Globe, Shield, TrendingUp, Users, Zap, CheckCircle } from '
 import Link from 'next/link'
 import Footer from '@/components/marketing/site/footer'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 
 export default function HomePage() {
+    // Slideshow images array
+    const heroImages = [
+        "https://images.pexels.com/photos/3856440/pexels-photo-3856440.jpeg",
+        "https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg",
+        "https://images.pexels.com/photos/7413915/pexels-photo-7413915.jpeg",
+        "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg",
+        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    ]
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+    // Auto-advance slideshow
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) =>
+                prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+            )
+        }, 5000) // Change image every 5 seconds
+
+        return () => clearInterval(interval)
+    }, [heroImages.length])
+
     return (
         <div className="min-h-screen bg-background">
             <SiteHeader />
 
-            {/* Hero Section */}
+            {/* Hero Section with Slideshow */}
             <section className="relative h-[500px] sm:h-[600px] lg:h-[700px] overflow-hidden bg-gradient-to-br dark:from-orange-950/20 dark:to-green-950/20">
-                {/* Background Image */}
-                <Image
-                    src="https://images.pexels.com/photos/3856440/pexels-photo-3856440.jpeg"
-                    alt="Hero Image"
-                    fill
-                    priority
-                    className="object-cover brightness-75"
-                />
+                {/* Slideshow Images */}
+                {heroImages.map((image, index) => (
+                    <div
+                        key={index}
+                        className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                            }`}
+                    >
+                        <Image
+                            src={image}
+                            alt={`Hero Image ${index + 1}`}
+                            fill
+                            priority={index === 0}
+                            className="object-cover brightness-75"
+                        />
+                    </div>
+                ))}
+
+                {/* Slideshow Indicators */}
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                    {heroImages.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentImageIndex(index)}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentImageIndex
+                                ? 'bg-white scale-110'
+                                : 'bg-white/50 hover:bg-white/75'
+                                }`}
+                            aria-label={`Go to slide ${index + 1}`}
+                        />
+                    ))}
+                </div>
 
                 {/* Overlay Content */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center bg-orange-950/25">
@@ -37,7 +85,7 @@ export default function HomePage() {
 
                     <p className="text-base sm:text-lg lg:text-xl text-white max-w-3xl mx-auto mb-8  font-medium ">
                         Connect authentically, trade confidently, and grow exponentially with Africa's most trusted
-                        business partners and verified supplier networks.
+                        business partners and verified supplier networks.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -55,7 +103,7 @@ export default function HomePage() {
             </section>
 
             {/* Stats Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+            {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div>
@@ -76,7 +124,7 @@ export default function HomePage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Features Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -155,17 +203,604 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-orange-600">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Trading?</h2>
-                    <p className="text-xl text-orange-100 mb-8">
-                        Join thousands of businesses already trading on Africa's premier B2B marketplace.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button asChild size="lg" variant="secondary">
-                            <Link href="/waitlist">Join Waitlist</Link>
+            {/* How It Works Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                            How It Works
+                        </h2>
+                        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                            Start trading in Africa in just a few simple steps. Our streamlined process makes it easy to connect, verify, and transact.
+                        </p>
+                    </div>
+
+                    <div className="relative">
+                        {/* Connection Line */}
+                        {/* <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-orange-500 via-green-500 to-blue-500 transform -translate-y-1/2 z-0"></div> */}
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                            {/* Step 1 */}
+                            <div className="text-center group">
+                                <div className="relative mb-6">
+                                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                                        <Users className="h-10 w-10 text-white" />
+                                    </div>
+                                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center">
+                                        <span className="text-sm font-bold text-orange-600 dark:text-orange-400">1</span>
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                                    Sign Up & Verify
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Create your account and complete our quick verification process to join our trusted network of African businesses.
+                                </p>
+                            </div>
+
+                            {/* Step 2 */}
+                            <div className="text-center group">
+                                <div className="relative mb-6">
+                                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                                        <Globe className="h-10 w-10 text-white" />
+                                    </div>
+                                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
+                                        <span className="text-sm font-bold text-green-600 dark:text-green-400">2</span>
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                                    Browse & Connect
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Explore thousands of verified suppliers across 54 African countries and connect with the right partners for your business.
+                                </p>
+                            </div>
+
+                            {/* Step 3 */}
+                            <div className="text-center group">
+                                <div className="relative mb-6">
+                                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                                        <Shield className="h-10 w-10 text-white" />
+                                    </div>
+                                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                                        <span className="text-sm font-bold text-blue-600 dark:text-blue-400">3</span>
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                                    Negotiate & Secure
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Use our built-in messaging system to negotiate terms and secure your deals with our escrow protection service.
+                                </p>
+                            </div>
+
+                            {/* Step 4 */}
+                            <div className="text-center group">
+                                <div className="relative mb-6">
+                                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                                        <TrendingUp className="h-10 w-10 text-white" />
+                                    </div>
+                                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center">
+                                        <span className="text-sm font-bold text-purple-600 dark:text-purple-400">4</span>
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                                    Trade & Grow
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Complete your transactions with confidence and track your growth with our comprehensive analytics and insights.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Bottom decorative element */}
+                        <div className="mt-16 text-center">
+                            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-green-500 rounded-full shadow-lg">
+                                <CheckCircle className="h-8 w-8 text-white" />
+                            </div>
+                            <p className="mt-4 text-lg font-medium text-gray-700 dark:text-gray-300">
+                                Ready to start your African trade journey?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Upcoming Products Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                            Upcoming Products
+                        </h2>
+                        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                            Discover the latest products from our verified African suppliers, coming soon to the marketplace.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {/* Product 1 */}
+                        <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="relative h-64 overflow-hidden">
+                                <Image
+                                    src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg"
+                                    alt="Premium Coffee Beans"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-all duration-300"></div>
+                                <div className="absolute top-4 right-4">
+                                    <Badge className="bg-white/20 text-white backdrop-blur-sm border-orange/30">
+                                        Coming Soon
+                                    </Badge>
+                                </div>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 className="text-xl font-bold mb-2">Premium Coffee Beans</h3>
+                                <p className="text-white/90 text-sm mb-3">Ethiopian single-origin arabica beans with rich, complex flavors</p>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold">From $24.99/kg</span>
+                                    <div className="flex items-center text-sm">
+                                        <Globe className="h-4 w-4 mr-1" />
+                                        Ethiopia
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="relative h-64 overflow-hidden">
+                                <Image
+                                    src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg"
+                                    alt="Premium Coffee Beans"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-all duration-300"></div>
+                                <div className="absolute top-4 right-4">
+                                    <Badge className="bg-white/20 text-white backdrop-blur-sm border-orange/30">
+                                        Coming Soon
+                                    </Badge>
+                                </div>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 className="text-xl font-bold mb-2">Premium Coffee Beans</h3>
+                                <p className="text-white/90 text-sm mb-3">Ethiopian single-origin arabica beans with rich, complex flavors</p>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold">From $24.99/kg</span>
+                                    <div className="flex items-center text-sm">
+                                        <Globe className="h-4 w-4 mr-1" />
+                                        Ethiopia
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        {/* Product 2 */}
+                        <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="relative h-64 overflow-hidden">
+                                <Image
+                                    src="https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg"
+                                    alt="Handwoven Textiles"
+                                    fill
+                                    className="object-cover group-hover:scale-110 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-all duration-300"></div>
+                                <div className="absolute top-4 right-4">
+                                    <Badge className="bg-white/20 text-white backdrop-blur-sm border-white/30">
+                                        Coming Soon
+                                    </Badge>
+                                </div>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 className="text-xl font-bold mb-2">Handwoven Textiles</h3>
+                                <p className="text-white/90 text-sm mb-3">Traditional Kente cloth patterns with authentic craftsmanship</p>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold">From $89.99/yard</span>
+                                    <div className="flex items-center text-sm">
+                                        <Globe className="h-4 w-4 mr-1" />
+                                        Ghana
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Product 3 */}
+                        <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="relative h-64 overflow-hidden">
+                                <Image
+                                    src="https://images.pexels.com/photos/4198021/pexels-photo-4198021.jpeg"
+                                    alt="Organic Shea Butter"
+                                    fill
+                                    className="object-cover group-hover:scale-110 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-all duration-300"></div>
+                                <div className="absolute top-4 right-4">
+                                    <Badge className="bg-white/20 text-white backdrop-blur-sm border-white/30">
+                                        Coming Soon
+                                    </Badge>
+                                </div>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 className="text-xl font-bold mb-2">Organic Shea Butter</h3>
+                                <p className="text-white/90 text-sm mb-3">Pure, unrefined shea butter from sustainable sources</p>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold">From $15.99/kg</span>
+                                    <div className="flex items-center text-sm">
+                                        <Globe className="h-4 w-4 mr-1" />
+                                        Burkina Faso
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Product 4 */}
+                        <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="relative h-64 overflow-hidden">
+                                <Image
+                                    src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg"
+                                    alt="Baobab Oil"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-all duration-300"></div>
+                                <div className="absolute top-4 right-4">
+                                    <Badge className="bg-white/20 text-white backdrop-blur-sm border-white/30">
+                                        Coming Soon
+                                    </Badge>
+                                </div>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 className="text-xl font-bold mb-2">Baobab Oil</h3>
+                                <p className="text-white/90 text-sm mb-3">Cold-pressed baobab seed oil rich in vitamins and antioxidants</p>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold">From $32.99/L</span>
+                                    <div className="flex items-center text-sm">
+                                        <Globe className="h-4 w-4 mr-1" />
+                                        Senegal
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Product 5 */}
+                        <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="relative h-64 overflow-hidden">
+                                <Image
+                                    src="https://images.pexels.com/photos/6045400/pexels-photo-6045400.jpeg"
+                                    alt="Handcrafted Jewelry"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-all duration-300"></div>
+                                <div className="absolute top-4 right-4">
+                                    <Badge className="bg-white/20 text-white backdrop-blur-sm border-white/30">
+                                        Coming Soon
+                                    </Badge>
+                                </div>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 className="text-xl font-bold mb-2">Handcrafted Jewelry</h3>
+                                <p className="text-white/90 text-sm mb-3">Traditional Maasai beadwork with contemporary designs</p>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold">From $45.99</span>
+                                    <div className="flex items-center text-sm">
+                                        <Globe className="h-4 w-4 mr-1" />
+                                        Kenya
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Product 6 */}
+                        <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="relative h-64 overflow-hidden">
+                                <Image
+                                    src="https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg"
+                                    alt="Rooibos Tea"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-all duration-300"></div>
+                                <div className="absolute top-4 right-4">
+                                    <Badge className="bg-white/20 text-white backdrop-blur-sm border-white/30">
+                                        Coming Soon
+                                    </Badge>
+                                </div>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 className="text-xl font-bold mb-2">Premium Rooibos Tea</h3>
+                                <p className="text-white/90 text-sm mb-3">Naturally caffeine-free red bush tea with antioxidant properties</p>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold">From $18.99/kg</span>
+                                    <div className="flex items-center text-sm">
+                                        <Globe className="h-4 w-4 mr-1" />
+                                        South Africa
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Product 7 */}
+                        <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="relative h-64 overflow-hidden">
+                                <Image
+                                    src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg"
+                                    alt="Premium Coffee Beans"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-br from-gray-600/50 to-gray-900/70 transition-all duration-300"></div>
+                                <div className="absolute top-4 right-4">
+                                    <Badge className="bg-white/20 text-white backdrop-blur-sm border-orange/30">
+                                        Coming Soon
+                                    </Badge>
+                                </div>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 className="text-xl font-bold mb-2">Premium Coffee Beans</h3>
+                                <p className="text-white/90 text-sm mb-3">Ethiopian single-origin arabica beans with rich, complex flavors</p>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold">From $24.99/kg</span>
+                                    <div className="flex items-center text-sm">
+                                        <Globe className="h-4 w-4 mr-1" />
+                                        Ethiopia
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {/* View All Products Button */}
+                    <div className="text-center mt-12">
+                        <Button asChild size="lg" className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-8">
+                            <Link href="/products">
+                                View All Products <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
                         </Button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Our Services Section */}
+            <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg"
+                        alt="Services Background"
+                        fill
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/70"></div>
+                </div>
+
+                <div className="relative z-10 max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                            Our Services
+                        </h2>
+                        <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+                            Comprehensive solutions to support your African trade journey from start to finish
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Advertising Service */}
+                        <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105">
+                            <div className="text-center">
+                                <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-orange-500/20 transition-colors duration-300">
+                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+
+                                <h3 className="text-xl font-semibold text-white mb-4 uppercase tracking-wide">
+                                    Advertisment
+                                </h3>
+
+                                <p className="text-gray-200 leading-relaxed mb-8">
+                                    Secure flexible financing for commodities through ATG's strategic financial partners,
+                                    supporting your business growth with tailored solutions and competitive rates.
+                                </p>
+
+                                <Button
+                                    variant="outline"
+                                    className="rounded-full px-6"
+                                >
+                                    Learn More →
+                                </Button>
+                            </div>
+                        </div>
+
+                        {/* Marketplace Service */}
+                        <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105">
+                            <div className="text-center">
+                                <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-green-500/20 transition-colors duration-300">
+                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17M17 13v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+                                    </svg>
+                                </div>
+
+                                <h3 className="text-xl font-semibold text-white mb-4 uppercase tracking-wide">
+                                    Marketplace
+                                </h3>
+
+                                <p className="text-gray-200 leading-relaxed mb-8">
+                                    Trade confidently in a secure environment with trusted partners. Our advanced
+                                    verification process and user-friendly interface make sourcing and selling seamless.
+                                </p>
+
+                                <Button
+                                    variant="outline"
+                                    className="rounded-full px-6"
+                                >
+                                    Learn More →
+                                </Button>
+                            </div>
+                        </div>
+
+                        {/* Logistics Service */}
+                        <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105 md:col-span-2 lg:col-span-1">
+                            <div className="text-center">
+                                <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-blue-500/20 transition-colors duration-300">
+                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17l3-10 3 10" />
+                                    </svg>
+                                </div>
+
+                                <h3 className="text-xl font-semibold text-white mb-4 uppercase tracking-wide">
+                                    Logistics
+                                </h3>
+
+                                <p className="text-gray-200 leading-relaxed mb-8">
+                                    Access streamlined logistics solutions through our trusted ATG partners, including
+                                    warehousing and reliable shipping providers for extra speed and security.
+                                </p>
+
+                                <Button
+                                    variant="outline"
+                                    className="rounded-full px-6"
+                                >
+                                    Learn More →
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Additional Services Row */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                        {/* Quality Assurance */}
+                        <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105">
+                            <div className="text-center">
+                                <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-purple-500/20 transition-colors duration-300">
+                                    <CheckCircle className="w-8 h-8 text-white" />
+                                </div>
+
+                                <h3 className="text-xl font-semibold text-white mb-4 uppercase tracking-wide">
+                                    Quality Assurance
+                                </h3>
+
+                                <p className="text-gray-200 leading-relaxed mb-8">
+                                    Comprehensive quality checks and certifications ensure all products meet international
+                                    standards before reaching your business.
+                                </p>
+
+                                <Button
+                                    variant="outline"
+                                    className="rounded-full px-6"
+                                >
+                                    Learn More →
+                                </Button>
+                            </div>
+                        </div>
+
+                        {/* Market Intelligence */}
+                        <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105">
+                            <div className="text-center">
+                                <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-teal-500/20 transition-colors duration-300">
+                                    <TrendingUp className="w-8 h-8 text-white" />
+                                </div>
+
+                                <h3 className="text-xl font-semibold text-white mb-4 uppercase tracking-wide">
+                                    Market Intelligence
+                                </h3>
+
+                                <p className="text-gray-200 leading-relaxed mb-8">
+                                    Access real-time market data, pricing trends, and industry insights to make
+                                    informed decisions and stay ahead of the competition.
+                                </p>
+
+                                <Button
+                                    variant="outline"
+                                    className="rounded-full px-6"
+                                >
+                                    Learn More →
+                                </Button>
+                            </div>
+                        </div>
+
+                        {/* Support Services */}
+                        <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105 md:col-span-2 lg:col-span-1">
+                            <div className="text-center">
+                                <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-red-500/20 transition-colors duration-300">
+                                    <Users className="w-8 h-8 text-white" />
+                                </div>
+
+                                <h3 className="text-xl font-semibold text-white mb-4 uppercase tracking-wide">
+                                    Support Services
+                                </h3>
+
+                                <p className="text-gray-200 leading-relaxed mb-8">
+                                    24/7 dedicated support team with local African market expertise to guide you
+                                    through every step of your trading journey.
+                                </p>
+
+                                <Button
+                                    variant="outline"
+                                    className="rounded-full px-6"
+                                >
+                                    Learn More →
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold text-black mb-4">Our Partnerships</h2>
+                    <div className="overflow-hidden whitespace-nowrap py-4 bg-white">
+                        <div className="animate-marquee flex space-x-8">
+                            <Image
+                                src="/images/partner1.png"
+                                alt="Partner 1"
+                                width={150}
+                                height={50}
+                                className="h-12 object-contain"
+                            />
+                            <Image
+                                src="/images/partner2.png"
+                                alt="Partner 2"
+                                width={150}
+                                height={50}
+                                className="h-12 object-contain"
+                            />
+                            <Image
+                                src="/images/partner3.png"
+                                alt="Partner 3"
+                                width={150}
+                                height={50}
+                                className="h-12 object-contain"
+                            />
+                            {/* Duplicate images for seamless loop */}
+                            <Image
+                                src="/images/partner1.png"
+                                alt="Partner 1"
+                                width={150}
+                                height={50}
+                                className="h-12 object-contain"
+                            />
+                            <Image
+                                src="/images/partner2.png"
+                                alt="Partner 2"
+                                width={150}
+                                height={50}
+                                className="h-12 object-contain"
+                            />
+                            <Image
+                                src="/images/partner3.png"
+                                alt="Partner 3"
+                                width={150}
+                                height={50}
+                                className="h-12 object-contain"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
