@@ -11,7 +11,7 @@ export default function Footer() {
                             Connecting African suppliers with global buyers for sustainable trade growth.
                         </p>
                     </div>
-                   
+
                     <div>
                         <h4 className="font-semibold mb-4">Company</h4>
                         <ul className="space-y-2 text-gray-400">
@@ -20,18 +20,17 @@ export default function Footer() {
                                     About Us
                                 </Link>
                             </li>
-                             <li>
+                            <li>
                                 <Link href="/contact" className="hover:text-white">
-                                   Contact us
+                                    Contact us
                                 </Link>
                             </li>
-                        
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-semibold mb-4">Support</h4>
                         <ul className="space-y-2 text-gray-400">
-                           
+
                             <li>
                                 <Link href="/privacy" className="hover:text-white">
                                     Privacy Policy

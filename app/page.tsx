@@ -751,58 +751,180 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold text-black mb-4">Our Partnerships</h2>
-                    <div className="overflow-hidden whitespace-nowrap py-4 bg-white">
-                        <div className="animate-marquee flex space-x-8">
-                            <Image
-                                src="/images/partner1.png"
-                                alt="Partner 1"
-                                width={150}
-                                height={50}
-                                className="h-12 object-contain"
-                            />
-                            <Image
-                                src="/images/partner2.png"
-                                alt="Partner 2"
-                                width={150}
-                                height={50}
-                                className="h-12 object-contain"
-                            />
-                            <Image
-                                src="/images/partner3.png"
-                                alt="Partner 3"
-                                width={150}
-                                height={50}
-                                className="h-12 object-contain"
-                            />
-                            {/* Duplicate images for seamless loop */}
-                            <Image
-                                src="/images/partner1.png"
-                                alt="Partner 1"
-                                width={150}
-                                height={50}
-                                className="h-12 object-contain"
-                            />
-                            <Image
-                                src="/images/partner2.png"
-                                alt="Partner 2"
-                                width={150}
-                                height={50}
-                                className="h-12 object-contain"
-                            />
-                            <Image
-                                src="/images/partner3.png"
-                                alt="Partner 3"
-                                width={150}
-                                height={50}
-                                className="h-12 object-contain"
-                            />
+            {/* Partners Section with Marquee */}
+            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800 overflow-hidden">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                            Trusted by Leading Organizations
+                        </h2>
+                        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                            We're proud to work with amazing partners across Africa and beyond
+                        </p>
+                    </div>
+
+                    {/* Marquee Container */}
+                    <div className="relative">
+                        {/* Gradient Overlays */}
+                        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent dark:from-gray-800 z-10"></div>
+                        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent dark:from-gray-800 z-10"></div>
+
+                        {/* Marquee Animation */}
+                        <div className="flex animate-marquee">
+                            {/* First set of logos */}
+                            <div className="flex items-center justify-center min-w-0 shrink-0">
+                                {/* Partner 1 - African Development Bank */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-orange-600 mb-1">ADB</div>
+                                        <div className="text-xs text-gray-500">African Dev Bank</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 2 - Trade & Development Bank */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-green-600 mb-1">TDB</div>
+                                        <div className="text-xs text-gray-500">Trade Dev Bank</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 3 - African Union */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-blue-600 mb-1">AU</div>
+                                        <div className="text-xs text-gray-500">African Union</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 4 - ECOWAS */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-purple-600 mb-1">ECOWAS</div>
+                                        <div className="text-xs text-gray-500">West Africa</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 5 - Standard Bank */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-teal-600 mb-1">SBG</div>
+                                        <div className="text-xs text-gray-500">Standard Bank</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 6 - Ecobank */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-red-600 mb-1">ECO</div>
+                                        <div className="text-xs text-gray-500">Ecobank</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 7 - AfCFTA */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-yellow-600 mb-1">AfCFTA</div>
+                                        <div className="text-xs text-gray-500">Continental FTA</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 8 - DHL */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-red-500 mb-1">DHL</div>
+                                        <div className="text-xs text-gray-500">Logistics</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Duplicate set for seamless loop */}
+                            <div className="flex items-center justify-center min-w-0 shrink-0">
+                                {/* Partner 1 - African Development Bank */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-orange-600 mb-1">ADB</div>
+                                        <div className="text-xs text-gray-500">African Dev Bank</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 2 - Trade & Development Bank */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-green-600 mb-1">TDB</div>
+                                        <div className="text-xs text-gray-500">Trade Dev Bank</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 3 - African Union */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-blue-600 mb-1">AU</div>
+                                        <div className="text-xs text-gray-500">African Union</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 4 - ECOWAS */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-purple-600 mb-1">ECOWAS</div>
+                                        <div className="text-xs text-gray-500">West Africa</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 5 - Standard Bank */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-teal-600 mb-1">SBG</div>
+                                        <div className="text-xs text-gray-500">Standard Bank</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 6 - Ecobank */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-red-600 mb-1">ECO</div>
+                                        <div className="text-xs text-gray-500">Ecobank</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 7 - AfCFTA */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-yellow-600 mb-1">AfCFTA</div>
+                                        <div className="text-xs text-gray-500">Continental FTA</div>
+                                    </div>
+                                </div>
+
+                                {/* Partner 8 - DHL */}
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-red-500 mb-1">DHL</div>
+                                        <div className="text-xs text-gray-500">Logistics</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                {/* CSS for marquee animation */}
+                <style jsx>{`
+                    @keyframes marquee {
+                        0% {
+                            transform: translateX(0%);
+                        }
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+                    .animate-marquee {
+                        animation: marquee 30s linear infinite;
+                    }
+                    .animate-marquee:hover {
+                        animation-play-state: paused;
+                    }
+                `}</style>
             </section>
 
             {/* Footer */}
