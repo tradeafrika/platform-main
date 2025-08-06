@@ -787,6 +787,12 @@ export default function HomePage() {
                                     </div>
                                 </div>
 
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <img src="/images/youth.jpeg" alt="EA" width="" />
+                                    </div>
+                                </div>
+
                             </div>
 
                             {/* Duplicate set for seamless loop */}
@@ -801,7 +807,13 @@ export default function HomePage() {
                                 {/* Partner 2 - Trade & Development Bank */}
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <img src="/images/ict logo.jpg" alt="innovation hub" width="" />
+                                        <img src="/images/ict logo.jpg" alt="MINISTRY" width="" />
+                                    </div>
+                                </div>
+
+                                <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <div className="text-center">
+                                        <img src="/images/youth.jpeg" alt="EA" width="" />
                                     </div>
                                 </div>
                             </div>
