@@ -10,8 +10,8 @@ export default function MainNav() {
     const pathname = usePathname()
     const [mobileOpen, setMobileOpen] = useState(false)
     const [categoriesOpen, setCategoriesOpen] = useState(false)
-    const dropdownRef = useRef(null)
-    const timeoutRef = useRef(null)
+    const dropdownRef = useRef<HTMLDivElement>(null)
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
     const links = [
         { href: '/', label: 'Home' },
@@ -135,8 +135,8 @@ export default function MainNav() {
 
     // Close dropdown when clicking outside
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setCategoriesOpen(false)
             }
         }
