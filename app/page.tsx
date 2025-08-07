@@ -765,10 +765,6 @@ export default function HomePage() {
 
                     {/* Marquee Container */}
                     <div className="relative">
-                        {/* Gradient Overlays */}
-                        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent dark:from-gray-800 z-10"></div>
-                        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent dark:from-gray-800 z-10"></div>
-
                         {/* Marquee Animation */}
                         <div className="flex animate-marquee">
                             {/* First set of logos */}
@@ -776,20 +772,26 @@ export default function HomePage() {
                                 {/* Partner 1 - African Development Bank */}
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <img src="/images/ict hub.jpg" alt="innovation hub" width="" />
+                                        <Link href="https://innovationhub.ug" target='_blank'>
+                                            <img src="/images/ict hub.jpg" alt="innovation hub" width="" />
+                                        </Link>
                                     </div>
                                 </div>
 
                                 {/* Partner 2 - Trade & Development Bank */}
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <img src="/images/ict logo.jpg" alt="innovation hub" width="" />
+                                        <Link href="https://ict.go.ug" target='_blank'>
+                                            <img src="/images/ict logo.jpg" alt="MINISTRY" width="" />
+                                        </Link>
                                     </div>
                                 </div>
 
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <img src="/images/youth.jpeg" alt="EA" width="" />
+                                        <Link href="https://afyef.org" target="_blank">
+                                            <img src="/images/youth.jpeg" alt="EA" width="" />
+                                        </Link>
                                     </div>
                                 </div>
 
@@ -800,20 +802,26 @@ export default function HomePage() {
                                 {/* Partner 1 - African Development Bank */}
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <img src="/images/ict hub.jpg" alt="innovation hub" width="" />
+                                        <Link href="https://innovationhub.ug" target='_blank'>
+                                            <img src="/images/ict hub.jpg" alt="innovation hub" width="" />
+                                        </Link>
                                     </div>
                                 </div>
 
                                 {/* Partner 2 - Trade & Development Bank */}
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <img src="/images/ict logo.jpg" alt="MINISTRY" width="" />
+                                        <Link href="https://ict.go.ug" target='_blank'>
+                                            <img src="/images/ict logo.jpg" alt="MINISTRY" width="" />
+                                        </Link>
                                     </div>
                                 </div>
 
                                 <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                                     <div className="text-center">
-                                        <img src="/images/youth.jpeg" alt="EA" width="" />
+                                        <Link href="https://afyef.org" target="_blank">
+                                            <img src="/images/youth.jpeg" alt="EA" width="" />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -840,6 +848,56 @@ export default function HomePage() {
                 `}</style>
             </section>
 
+            {/* Regios Section */}
+            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800 overflow-hidden">
+                <div className="max-w-7xl mx-auto flex justify-center">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                            Our Regions of Operation
+                        </h2>
+                        <p className="text-lg text-gray-600 dark:text-gray-300">
+                            We are Proud to operate within vibrant Region Economic Communities across Africa.
+                        </p>
+
+                        <div className="relative">
+                            <div className="flex">
+                                <div className="flex items-center justify-center min-w-0 shrink-0 pt-20">
+                                    <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700">
+                                        <div className="text-center">
+                                            <Link href="https://au.int/en/african-continental-free-trade-area" target='_blank'>
+                                                <img src="/images/AFCFTA.jpeg" alt="AFCFTA" width="" />
+                                            </Link>
+                                        </div>
+                                    </div>
+
+                                    <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                        <div className="text-center">
+                                            <Link href="https://www.ecowas.int" target='_blank'>
+                                                <img src="/images/CEDEO.jpeg" alt="CEDEO" width="" />
+                                            </Link>
+                                        </div>
+                                    </div>
+
+                                    <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                        <div className="text-center">
+                                            <Link href="https://www.comesa.int" target="_blank">
+                                                <img src="/images/COMESA.jpeg" alt="COMESA" width="" />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className="mx-8 flex items-center justify-center h-20 w-40 bg-white dark:bg-gray-700 rounded-lg">
+                                        <div className="text-center">
+                                            <Link href="https://www.eac.int" target='_blank'>
+                                                <img src="/images/EAC.jpeg" alt="EAC" width="" />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             {/* Footer */}
             <Footer />
         </div>
