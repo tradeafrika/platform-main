@@ -15,7 +15,7 @@ export default function HomePage() {
     const heroImages = [
         "https://images.pexels.com/photos/3856440/pexels-photo-3856440.jpeg",
         "https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg",
-        "https://images.pexels.com/photos/7413915/pexels-photo-7413915.jpeg",
+        "https://images.pexels.com/photos/2326876/pexels-photo-2326876.jpeg",
         "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg",
         "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
     ]
