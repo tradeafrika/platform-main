@@ -217,11 +217,10 @@ export default function HomePage() {
 
                     <div className="relative">
                         {/* Connection Line */}
-                        {/* <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-orange-500 via-green-500 to-blue-500 transform -translate-y-1/2 z-0"></div> */}
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
                             {/* Step 1 */}
-                            <div className="text-center group">
+                            <div className="text-center group shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg p-6 bg-white">
                                 <div className="relative mb-6">
                                     <div className="w-20 h-20 mx-auto bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                                         <Users className="h-10 w-10 text-white" />
@@ -239,7 +238,7 @@ export default function HomePage() {
                             </div>
 
                             {/* Step 2 */}
-                            <div className="text-center group">
+                            <div className="text-center group shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg p-6 bg-white">
                                 <div className="relative mb-6">
                                     <div className="w-20 h-20 mx-auto bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                                         <Globe className="h-10 w-10 text-white" />
@@ -257,7 +256,7 @@ export default function HomePage() {
                             </div>
 
                             {/* Step 3 */}
-                            <div className="text-center group">
+                            <div className="text-center group shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg p-6 bg-white">
                                 <div className="relative mb-6">
                                     <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                                         <Shield className="h-10 w-10 text-white" />
@@ -275,7 +274,7 @@ export default function HomePage() {
                             </div>
 
                             {/* Step 4 */}
-                            <div className="text-center group">
+                            <div className="text-center group shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg p-6 bg-white">
                                 <div className="relative mb-6">
                                     <div className="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                                         <TrendingUp className="h-10 w-10 text-white" />
