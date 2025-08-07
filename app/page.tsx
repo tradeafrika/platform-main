@@ -553,13 +553,13 @@ export default function HomePage() {
                     </div>
 
                     {/* View All Products Button */}
-                    <div className="text-center mt-12">
+                    {/* <div className="text-center mt-12">
                         <Button asChild size="lg" className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-8">
                             <Link href="/products">
                                 View All Products <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                         </Button>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
