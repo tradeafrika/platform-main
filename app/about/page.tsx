@@ -12,13 +12,37 @@ export default function AboutUs() {
         <main className="bg-white dark:bg-background text-foreground">
             <SiteHeader />
             {/* Hero Section */}
-            <section className="relative bg-afrika h-[300px] sm:h-[400px] flex items-center justify-center text-center overflow-hidden ">
-                <div className="relative z-10 px-4 ">
-                    <h1 className="text-4xl sm:text-5xl font-extrabold text-white">About Us</h1>
-                    <p className="mt-4 text-white/90 max-w-xl mx-auto text-base sm:text-lg">
+            <section className="relative h-[300px] sm:h-[400px] flex items-center justify-center text-center overflow-hidden">
+                {/* Background Image with Gradient Overlay */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{
+                        backgroundImage: `
+                        linear-gradient(
+                            135deg,
+                            rgba(249, 115, 22, 0.85) 0%,
+                            rgba(234, 90, 12, 0.6) 25%,
+                            rgba(194, 64, 12, 0.44) 50%,
+                            rgba(154, 52, 18, 0.4) 75%,
+                            rgba(124, 44, 18, 0.28) 100%
+                        ),
+                        url('/images/About.jpeg')
+                    `
+                    }}
+                />
+
+                {/* Content */}
+                <div className="relative z-10 px-4">
+                    <h1 className="text-4xl sm:text-5xl font-extrabold text-white drop-shadow-lg">
+                        About Us
+                    </h1>
+                    <p className="mt-4 text-white/90 max-w-xl mx-auto text-base sm:text-lg drop-shadow-md">
                         Transforming intra-African trade through technology, trust, and transparency.
                     </p>
                 </div>
+
+                {/* Additional overlay for better text contrast if needed */}
+                <div className="absolute inset-0 bg-black/20"></div>
             </section>
 
             {/* Our Story Section */}
