@@ -2,8 +2,19 @@ import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <footer className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <footer className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+
+            <div
+                className="absolute inset-0 opacity-20 bg-no-repeat bg-center bg-contain"
+                style={{
+                    backgroundImage: `url("/images/afrika.png")`,
+                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                    minHeight: '200px'
+                }}
+            />
+
+
+            <div className="max-w-7xl mx-auto relative z-10">
                 <div className="grid md:grid-cols-4 gap-8">
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Trade Afrika</h3>
@@ -30,7 +41,6 @@ export default function Footer() {
                     <div>
                         <h4 className="font-semibold mb-4">Support</h4>
                         <ul className="space-y-2 text-gray-400">
-
                             <li>
                                 <Link href="/privacy" className="hover:text-white">
                                     Privacy Policy

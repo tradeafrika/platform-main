@@ -16,7 +16,7 @@ export default function MainNav() {
     const links = [
         { href: '/', label: 'Home' },
         { href: '/about', label: 'About' },
-        { href: '/categories', label: 'All categories', hasDropdown: true },
+        { href: '#', label: 'All categories', hasDropdown: true },
         { href: '/contact', label: 'Contact' },
         // Add more routes here if needed
     ]
@@ -197,7 +197,7 @@ export default function MainNav() {
                                                 {category.items.map((item, itemIndex) => (
                                                     <li key={itemIndex}>
                                                         <Link
-                                                            href={`/category/${item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                                                            href={`/#/${item.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                                                             className="text-xs text-gray-600 hover:text-orange-500 transition-colors block py-1"
                                                             onClick={() => setCategoriesOpen(false)}
                                                         >
