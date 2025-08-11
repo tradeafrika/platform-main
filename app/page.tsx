@@ -337,7 +337,7 @@ export default function HomePage() {
                                 <h3 className="text-xl font-bold mb-2">Premium Coffee Beans</h3>
                                 <p className="text-white/90 text-sm mb-3">Ethiopian single-origin arabica beans with rich, complex flavors</p>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-lg font-semibold">From $24.99/kg</span>
+                                    {/* <span className="text-lg font-semibold">From $24.99/kg</span> */}
                                     <div className="flex items-center text-sm">
                                         <Globe className="h-4 w-4 mr-1" />
                                         Ethiopia
@@ -511,7 +511,7 @@ export default function HomePage() {
                                 <h3 className="text-xl font-bold mb-2">Premium Rooibos Tea</h3>
                                 <p className="text-white/90 text-sm mb-3">Naturally caffeine-free red bush tea with antioxidant properties</p>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-lg font-semibold">From $18.99/kg</span>
+                                    {/* <span className="text-lg font-semibold">From $18.99/kg</span> */}
                                     <div className="flex items-center text-sm">
                                         <Globe className="h-4 w-4 mr-1" />
                                         South Africa
