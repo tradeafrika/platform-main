@@ -84,8 +84,7 @@ export default function HomePage() {
                     </h1>
 
                     <p className="text-base sm:text-lg lg:text-xl text-white max-w-3xl mx-auto mb-8  font-medium ">
-                        Connect authentically, trade confidently, and grow exponentially with Africa's most trusted
-                        business partners and verified supplier networks.
+                        Empowering African SMEs to connect, trade, and grow with trusted partners across the continent.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -366,7 +365,7 @@ export default function HomePage() {
                                 <h3 className="text-xl font-bold mb-2">Premium Coffee Beans</h3>
                                 <p className="text-white/90 text-sm mb-3">Ethiopian single-origin arabica beans with rich, complex flavors</p>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-lg font-semibold">From $24.99/kg</span>
+                                    {/* <span className="text-lg font-semibold">From $24.99/kg</span> */}
                                     <div className="flex items-center text-sm">
                                         <Globe className="h-4 w-4 mr-1" />
                                         Ethiopia
@@ -396,7 +395,7 @@ export default function HomePage() {
                                 <h3 className="text-xl font-bold mb-2">Handwoven Textiles</h3>
                                 <p className="text-white/90 text-sm mb-3">Traditional Kente cloth patterns with authentic craftsmanship</p>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-lg font-semibold">From $89.99/yard</span>
+                                    {/* <span className="text-lg font-semibold">From $89.99/yard</span> */}
                                     <div className="flex items-center text-sm">
                                         <Globe className="h-4 w-4 mr-1" />
                                         Ghana
@@ -425,7 +424,7 @@ export default function HomePage() {
                                 <h3 className="text-xl font-bold mb-2">Organic Shea Butter</h3>
                                 <p className="text-white/90 text-sm mb-3">Pure, unrefined shea butter from sustainable sources</p>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-lg font-semibold">From $15.99/kg</span>
+                                    {/* <span className="text-lg font-semibold">From $15.99/kg</span> */}
                                     <div className="flex items-center text-sm">
                                         <Globe className="h-4 w-4 mr-1" />
                                         Burkina Faso
@@ -454,7 +453,7 @@ export default function HomePage() {
                                 <h3 className="text-xl font-bold mb-2">Baobab Oil</h3>
                                 <p className="text-white/90 text-sm mb-3">Cold-pressed baobab seed oil rich in vitamins and antioxidants</p>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-lg font-semibold">From $32.99/L</span>
+                                    {/* <span className="text-lg font-semibold">From $32.99/L</span> */}
                                     <div className="flex items-center text-sm">
                                         <Globe className="h-4 w-4 mr-1" />
                                         Senegal
@@ -483,7 +482,7 @@ export default function HomePage() {
                                 <h3 className="text-xl font-bold mb-2">Handcrafted Jewelry</h3>
                                 <p className="text-white/90 text-sm mb-3">Traditional Maasai beadwork with contemporary designs</p>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-lg font-semibold">From $45.99</span>
+                                    {/* <span className="text-lg font-semibold">From $45.99</span> */}
                                     <div className="flex items-center text-sm">
                                         <Globe className="h-4 w-4 mr-1" />
                                         Kenya
@@ -541,7 +540,7 @@ export default function HomePage() {
                                 <h3 className="text-xl font-bold mb-2">Premium Coffee Beans</h3>
                                 <p className="text-white/90 text-sm mb-3">Ethiopian single-origin arabica beans with rich, complex flavors</p>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-lg font-semibold">From $24.99/kg</span>
+                                    {/* <span className="text-lg font-semibold">From $24.99/kg</span> */}
                                     <div className="flex items-center text-sm">
                                         <Globe className="h-4 w-4 mr-1" />
                                         Ethiopia
@@ -587,33 +586,6 @@ export default function HomePage() {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Advertising Service */}
-                        <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105">
-                            <div className="text-center">
-                                <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-orange-500/20 transition-colors duration-300">
-                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-
-                                <h3 className="text-xl font-semibold text-white mb-4 uppercase tracking-wide">
-                                    Advertisment
-                                </h3>
-
-                                <p className="text-gray-200 leading-relaxed mb-8">
-                                    Secure flexible financing for commodities through ATG's strategic financial partners,
-                                    supporting your business growth with tailored solutions and competitive rates.
-                                </p>
-
-                                <Button
-                                    variant="outline"
-                                    className="rounded-full px-6"
-                                >
-                                    Learn More →
-                                </Button>
-                            </div>
-                        </div>
-
                         {/* Marketplace Service */}
                         <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105">
                             <div className="text-center">
@@ -628,18 +600,45 @@ export default function HomePage() {
                                 </h3>
 
                                 <p className="text-gray-200 leading-relaxed mb-8">
-                                    Trade confidently in a secure environment with trusted partners. Our advanced
-                                    verification process and user-friendly interface make sourcing and selling seamless.
+                                    Connect with trusted partners, trade securely, and grow your business seamlessly on Trade Afrika’s verified marketplace.
                                 </p>
 
-                                <Button
+                                {/* <Button
                                     variant="outline"
                                     className="rounded-full px-6"
                                 >
                                     Learn More →
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
+
+                        {/* Advertising Service */}
+                        <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105">
+                            <div className="text-center">
+                                <div className="w-16 h-16 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-orange-500/20 transition-colors duration-300">
+                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+
+                                <h3 className="text-xl font-semibold text-white mb-4 uppercase tracking-wide">
+                                    Advertisment
+                                </h3>
+
+                                <p className="text-gray-200 leading-relaxed mb-8">
+                                    Promote your products and services directly to verified African SMEs on Trade Afrika. Increase your brand visibility and drive targeted leads across the continent.
+                                </p>
+
+                                {/* <Button
+                                    variant="outline"
+                                    className="rounded-full px-6"
+                                >
+                                    Learn More →
+                                </Button> */}
+                            </div>
+                        </div>
+
+
 
                         {/* Logistics Service */}
                         <div className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-black/50 transition-all duration-300 hover:scale-105 md:col-span-2 lg:col-span-1">
@@ -656,16 +655,16 @@ export default function HomePage() {
                                 </h3>
 
                                 <p className="text-gray-200 leading-relaxed mb-8">
-                                    Access streamlined logistics solutions through our trusted ATG partners, including
-                                    warehousing and reliable shipping providers for extra speed and security.
+                                    Unlock seamless logistics with Trade Afrika’s trusted partners, offering warehousing and reliable shipping for faster,
+                                    secure deliveries across Africa.
                                 </p>
 
-                                <Button
+                                {/* <Button
                                     variant="outline"
                                     className="rounded-full px-6"
                                 >
                                     Learn More →
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
                     </div>
@@ -688,12 +687,12 @@ export default function HomePage() {
                                     standards before reaching your business.
                                 </p>
 
-                                <Button
+                                {/* <Button
                                     variant="outline"
                                     className="rounded-full px-6"
                                 >
                                     Learn More →
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
 
@@ -712,13 +711,13 @@ export default function HomePage() {
                                     Access real-time market data, pricing trends, and industry insights to make
                                     informed decisions and stay ahead of the competition.
                                 </p>
-
+                                {/* 
                                 <Button
                                     variant="outline"
                                     className="rounded-full px-6"
                                 >
                                     Learn More →
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
 
@@ -738,12 +737,12 @@ export default function HomePage() {
                                     through every step of your trading journey.
                                 </p>
 
-                                <Button
+                                {/* <Button
                                     variant="outline"
                                     className="rounded-full px-6"
                                 >
                                     Learn More →
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
                     </div>

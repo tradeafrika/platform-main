@@ -63,31 +63,29 @@ export default function AboutUs() {
                     <div className="grid gap-8 lg:grid-cols-3">
                         {/* Mission Card */}
                         <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-orange-100">
-                            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                            <div className="w-12 h-12 items-center justify-center mb-6">
                                 <div className="w-6 h-6 bg-orange-600 rounded-full"></div>
                             </div>
                             <h3 className="text-xl font-bold mb-4 text-orange-600">Our Mission</h3>
                             <p className="text-muted-foreground leading-relaxed">
-                                To connect African businesses through a digital-first platform that builds trust, simplifies
-                                trade, and promotes economic growth across borders.
+                                To be Africa’s most trusted, tech-driven B2B platform that fuels scalable growth for SMEs and seamless Intra-African Trade.
                             </p>
                         </div>
 
                         {/* Vision Card */}
                         <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-green-100">
-                            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                            <div className="w-12 h-12 items-center justify-center mb-6">
                                 <div className="w-6 h-6 bg-green-600 rounded-full"></div>
                             </div>
                             <h3 className="text-xl font-bold mb-4 text-green-600">Our Vision</h3>
                             <p className="text-muted-foreground leading-relaxed">
-                                A thriving pan-African economy powered by technology, where any SME can confidently find and
-                                work with partners across the continent.
+                                A Continent-wide B2B trade ecosystem of e-commerce and trust.
                             </p>
                         </div>
 
                         {/* Values Card */}
                         <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-orange-100">
-                            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                            <div className="w-12 h-12 items-center justify-center mb-6">
                                 <div className="w-6 h-6 bg-orange-500 rounded-full"></div>
                             </div>
                             <h3 className="text-xl font-bold mb-4 text-orange-500">Our Values</h3>
