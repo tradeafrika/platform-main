@@ -14,10 +14,10 @@ export default function HomePage() {
     // Slideshow images array
     const heroImages = [
         "https://images.pexels.com/photos/3856440/pexels-photo-3856440.jpeg",
-        "https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg",
+        "https://images.pexels.com/photos/1181370/pexels-photo-1181370.jpeg",
         "https://images.pexels.com/photos/2326876/pexels-photo-2326876.jpeg",
-        "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg",
-        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+        "https://images.pexels.com/photos/7620697/pexels-photo-7620697.jpeg",
+        "https://images.pexels.com/photos/955395/pexels-photo-955395.jpeg"
     ]
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
