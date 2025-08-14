@@ -321,7 +321,7 @@ export default function HomePage() {
                         <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                             <div className="relative h-64 overflow-hidden">
                                 <Image
-                                    src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg"
+                                    src="https://images.pexels.com/photos/4098880/pexels-photo-4098880.jpeg"
                                     alt="Premium Coffee Beans"
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -334,7 +334,7 @@ export default function HomePage() {
                                 </div>
                             </div>
                             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                <h3 className="text-xl font-bold mb-2">Premium Coffee Beans</h3>
+                                <h3 className="text-xl font-bold mb-2">Coffee Beans</h3>
                                 <p className="text-white/90 text-sm mb-3">Ethiopian single-origin arabica beans with rich, complex flavors</p>
                                 <div className="flex items-center justify-between">
                                     {/* <span className="text-lg font-semibold">From $24.99/kg</span> */}
@@ -524,8 +524,8 @@ export default function HomePage() {
                         <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                             <div className="relative h-64 overflow-hidden">
                                 <Image
-                                    src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg"
-                                    alt="Premium Coffee Beans"
+                                    src="https://images.pexels.com/photos/11275299/pexels-photo-11275299.jpeg"
+                                    alt="hand woven textiles"
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                                 />
@@ -537,8 +537,8 @@ export default function HomePage() {
                                 </div>
                             </div>
                             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                <h3 className="text-xl font-bold mb-2">Premium Coffee Beans</h3>
-                                <p className="text-white/90 text-sm mb-3">Ethiopian single-origin arabica beans with rich, complex flavors</p>
+                                <h3 className="text-xl font-bold mb-2">Hand Wooven Textile</h3>
+                                <p className="text-white/90 text-sm mb-3">Ethiopian single-origin arabica textiles</p>
                                 <div className="flex items-center justify-between">
                                     {/* <span className="text-lg font-semibold">From $24.99/kg</span> */}
                                     <div className="flex items-center text-sm">

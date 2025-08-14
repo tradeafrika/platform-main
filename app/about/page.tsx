@@ -17,17 +17,7 @@ export default function AboutUs() {
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{
-                        backgroundImage: `
-                        linear-gradient(
-                            135deg,
-                            rgba(249, 115, 22, 0.85) 0%,
-                            rgba(234, 90, 12, 0.6) 25%,
-                            rgba(194, 64, 12, 0.44) 50%,
-                            rgba(154, 52, 18, 0.4) 75%,
-                            rgba(124, 44, 18, 0.28) 100%
-                        ),
-                        url('/images/About.jpeg')
-                    `
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.36)), url('https://images.pexels.com/photos/20712621/pexels-photo-20712621.jpeg')`
                     }}
                 />
 
