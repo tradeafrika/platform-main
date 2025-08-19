@@ -17,8 +17,8 @@ export default function MainNav() {
         { href: '/', label: 'Home' },
         { href: '/about', label: 'About' },
         { href: '#', label: 'All categories', hasDropdown: true },
+        { href: '/investors', label: 'Investors' },
         { href: '/contact', label: 'Contact' },
-        // Add more routes here if needed
     ]
 
     const categories = [
