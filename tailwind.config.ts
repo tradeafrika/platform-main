@@ -20,13 +20,17 @@ const config = {
     },
     extend: {
       colors: {
+
+        'trade-green': '#2d8f3f',
+        'trade-orange': '#ff6b35',
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        afrika:"hsl(var(--afrika))",
-        afrikao: "hsl(var(--afrika-orange))",        
+        afrika: "hsl(var(--afrika))",
+        afrikao: "hsl(var(--afrika-orange))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
